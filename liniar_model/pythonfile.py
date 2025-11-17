@@ -52,33 +52,33 @@ y_pred_real = y_pred_scaled * (y.max() - y.min()) + y.min()
 
 
 
-import numpy as np
+#import numpy as np
 
-def sigmoid(z):
-    return 1 / (1 + np.exp(-z))
+#def sigmoid(z):
+  #  return 1 / (1 + np.exp(-z))
 
-def logistic_model(x, w, b):
-    return sigmoid(w * x + b)
+#def logistic_model(x, w, b):
+    #return sigmoid(w * x + b)
 
-def logistic_cost(x, y, w, b):
-    m = len(x)
-    y_pred = logistic_model(x, w, b)
-    cost = -(1/m) * np.sum(y*np.log(y_pred) + (1-y)*np.log(1-y_pred))
-    return cost
+#def logistic_cost(x, y, w, b):
+  #  m = len(x)
+   # y_pred = logistic_model(x, w, b)
+   # cost = -(1/m) * np.sum(y*np.log(y_pred) + (1-y)*np.log(1-y_pred))
+   # return cost
 
-def logistic_gradient_descent(x, y, w, b, alpha, iterations):
-    m = len(x)
+#def logistic_gradient_descent(x, y, w, b, alpha, iterations):
+  #  m = len(x)
 
-    for _ in range(iterations):
-        y_pred = logistic_model(x, w, b)
+   # for _ in range(iterations):
+       # y_pred = logistic_model(x, w, b)
 
-        dw = (1/m) * np.sum((y_pred - y) * x)
-        db = (1/m) * np.sum((y_pred - y))
+      #  dw = (1/m) * np.sum((y_pred - y) * x)
+      #  db = (1/m) * np.sum((y_pred - y))
 
-        w = w - alpha * dw
-        b = b - alpha * db
+     #  w = w - alpha * dw
+      #  b = b - alpha * db
 
-    return w, b
+   # return w, b
 
 
 #data charging from the datset using pandas 
@@ -108,4 +108,5 @@ def logistic_gradient_descent(x, y, w, b, alpha, iterations):
 #y = y[X.index]   
 
 #link of data set used 
+
 #https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/data?select=train.csv

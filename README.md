@@ -157,11 +157,6 @@ After studying this project, you will understand:
 
 ---
 
-## 📄 License
-
-Specify your license here (MIT, GPL, etc.)
-
----
 
 ## 👨‍💻 Author
 
